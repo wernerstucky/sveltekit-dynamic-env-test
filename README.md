@@ -42,5 +42,5 @@ Key point to note : You cannot simply change from **static** to **dynamic** and 
 2022-11-28 :
 
 - FOUND ERROR : importing variables from static vs dynamic are notably different.  For dynamic you need to import the { env } object and then get the variable eg. env.VAR1 as opposed to directly getting the var eg. { VAR1 } when using static
-- ~~ Not working as expected when doing `npm run dev`  ~~
-- ~~ Not working as expected when using modified run script  ~~
+~~ Not working as expected when doing npm run dev  ~~
+~~ Not working as expected when using modified run script  ~~
