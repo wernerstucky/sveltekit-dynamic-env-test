@@ -30,7 +30,9 @@ console.log("var1 is",VAR1);
 ```
 
 
-Hope this helps someone in future
+Hope this helps someone in future.
+
+Key point to note : You cannot simply change from **static** to **dynamic** and expect things to work :)
 
 
 
