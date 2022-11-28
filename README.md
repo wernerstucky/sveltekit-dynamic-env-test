@@ -13,11 +13,32 @@ The variables should be exported from the .env file
 Test public on the default route **/**
 Test server on the server route **/server**
 
-Another way to try make it work is to edit the "dev" run script in package.json as follows :
 
-`"dev": "PUBLIC_VAR1=packagejson VAR2=packagejson vite dev",`
+**FOUND ERROR** : 
+Importing variables from static vs dynamic are *notably* different.  For dynamic you need to import the **{ env }** object and then get the variable eg. **env.VAR1** as opposed to directly getting the var eg. **{ VAR1 }** when using static
+
+Example Static : 
+```
+import { VAR1 } from "$env/static/private";
+console.log("var1 is",VAR1);
+```
+Example Dynamic : 
+```
+import { env } from "$env/dynamic/private";
+const VAR1 = env.VAR1;
+console.log("var1 is",VAR1);
+```
+
+
+Hope this helps someone in future
+
+
+
+
+
 
 2022-11-28 :
 
-- Not working as expected when doing `npm run dev`
-- Not working as expected when using modified run script
+- FOUND ERROR : importing variables from static vs dynamic are notably different.  For dynamic you need to import the { env } object and then get the variable eg. env.VAR1 as opposed to directly getting the var eg. { VAR1 } when using static
+- ~~Not working as expected when doing `npm run dev` ~~
+- ~~Not working as expected when using modified run script ~~
